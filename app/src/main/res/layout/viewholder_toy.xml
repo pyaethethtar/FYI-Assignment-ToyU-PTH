@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_medium_3"
+    app:cardElevation="0dp"
+    android:layout_marginBottom="@dimen/margin_medium_3"
+    android:layout_marginHorizontal="@dimen/margin_medium_1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        android:paddingBottom="@dimen/margin_medium_3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivToy"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_toy_img"
+            android:src="@drawable/group1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/margin_medium_2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToyType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivToy"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_toStartOf="@+id/btnDetails"
+            android:text="NEW"
+            style="@style/text_category_new"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvToyType"
+            android:layout_alignEnd="@id/tvToyType"
+            android:text="Mini Bot"
+            style="@style/text_regular"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnDetails"
+            android:layout_width="@dimen/height_forward"
+            android:layout_height="@dimen/height_forward"
+            android:background="@drawable/rounded_corner_orange"
+            android:src="@drawable/forward"
+            android:padding="@dimen/margin_medium_1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/tvToyName"/>
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

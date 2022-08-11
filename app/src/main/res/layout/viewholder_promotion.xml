@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_medium_3"
+    app:cardElevation="0dp"
+    android:layout_marginStart="@dimen/margin_medium_3">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="@dimen/width_promotion"
+        android:layout_height="@dimen/height_promotion"
+        android:background="@color/colorAccentYellow"
+        android:padding="@dimen/margin_medium"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivToy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/ivDiscount"
+            android:background="@drawable/rectangle44"
+            android:src="@drawable/mask_group_3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group56"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

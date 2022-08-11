@@ -25,6 +25,7 @@
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_regular">14sp</dimen>
     <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_2x_2">18sp</dimen>
     <dimen name="text_regular_3x">20sp</dimen>
     <dimen name="text_heading_1x">24sp</dimen>
     <dimen name="text_heading_2x">32sp</dimen>
@@ -35,5 +36,26 @@
 
 
     <!-- Specific with ratio -->
+    <dimen name="height_bottom_navi">82dp</dimen>
+    <dimen name="height_app_bar">142dp</dimen>
+    <dimen name="width_promotion">244dp</dimen>
+    <dimen name="height_promotion">134dp</dimen>
+    <dimen name="padding_filter">14dp</dimen>
+    <dimen name="height_forward">34dp</dimen>
+    <dimen name="height_button">56dp</dimen>
+    <dimen name="height_line">1dp</dimen>
+    <dimen name="width_age_category">77dp</dimen>
+    <dimen name="height_age_category">80dp</dimen>
+    <dimen name="height_seekbar">3dp</dimen>
+    <dimen name="height_details_image">158dp</dimen>
+    <dimen name="margin_medium_4">22dp</dimen>
+    <dimen name="size_owner">53dp</dimen>
+    <dimen name="width_cart">162dp</dimen>
+    <dimen name="height_cart">174dp</dimen>
+    <dimen name="height_cart_toy">102dp</dimen>
+    <dimen name="height_order_layout">54dp</dimen>
+    <dimen name="height_toy_img">120dp</dimen>
+
+    <dimen name="text_age">30sp</dimen>
 
 </resources>

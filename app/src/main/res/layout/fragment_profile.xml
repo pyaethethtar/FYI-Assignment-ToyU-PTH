@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment"
+    android:background="@color/colorBGwhite">
+
+    <RelativeLayout
+        android:id="@+id/layoutAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu_dark"
+            android:layout_marginEnd="@dimen/margin_medium_1"
+            android:layout_marginStart="@dimen/margin_medium_3"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/title_dark"
+            android:layout_toEndOf="@id/btnMenu"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/noti_dark"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_3"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/vpEmpty"
+        layout="@layout/viewpod_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutAppbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuHome"
+        android:title="@string/menu_home"
+        android:contentDescription="@string/menu_home"
+        android:icon="@drawable/menu_home"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuFav"
+        android:title="@string/menu_favourite"
+        android:contentDescription="@string/menu_favourite"
+        android:icon="@drawable/favourite"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuCart"
+        android:title="@string/menu_cart"
+        android:contentDescription="@string/menu_cart"
+        app:showAsAction="never"
+        android:icon="@drawable/navi_cart"/>
+
+    <item
+        android:id="@+id/menuProfile"
+        android:title="@string/menu_profile"
+        android:contentDescription="@string/menu_profile"
+        app:showAsAction="never"
+        android:icon="@drawable/navi_profile"/>
+</menu>

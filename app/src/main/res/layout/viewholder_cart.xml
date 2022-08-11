@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/margin_medium_2"
+    android:background="@color/colorBGwhite">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvToy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium_3"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="@dimen/margin_medium_3">
+
+        <RelativeLayout
+            android:layout_width="@dimen/width_cart"
+            android:layout_height="@dimen/height_cart"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_medium_2">
+
+            <FrameLayout
+                android:id="@+id/flToy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivToy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_cart_toy"
+                    android:src="@drawable/group1" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cart_checked"
+                    android:layout_gravity="top|end"/>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToyType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvToyName"
+                android:fontFamily="@font/inter_regular"
+                android:text="NEW"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_small" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvToyName"
+                style="@style/text_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:text="Remote Submarine" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOwner"
+        android:layout_width="@dimen/height_forward"
+        android:layout_height="@dimen/height_forward"
+        android:layout_alignTop="@id/lblOwnedBy"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_toStartOf="@id/lblOwnedBy"
+        android:src="@drawable/mask_group5_round" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblOwnedBy"
+        style="@style/text_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_owned_by"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_small"
+        android:layout_above="@id/tvOwner"
+        android:layout_alignEnd="@id/btnPlus"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOwner"
+        style="@style/text_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvLeftCount"
+        android:layout_alignEnd="@id/btnPlus"
+        android:text="Thomas" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLeftCount"
+        style="@style/text_extra_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvSubTotal"
+        android:layout_alignEnd="@id/btnPlus"
+        android:layout_marginBottom="@dimen/margin_medium_1"
+        android:fontFamily="@font/inter_medium"
+        android:text="3 items left" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubTotal"
+        style="@style/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnPlus"
+        android:layout_alignEnd="@id/btnPlus"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="$75.00"
+        android:textSize="@dimen/text_regular_2x_2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnMinus"
+        android:layout_width="@dimen/height_forward"
+        android:layout_height="@dimen/height_forward"
+        app:cardCornerRadius="@dimen/margin_medium"
+        android:layout_alignTop="@id/btnPlus"
+        android:layout_alignBottom="@id/btnPlus"
+        android:layout_toStartOf="@id/tvCount">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="-"
+            style="@style/text_semi_title"
+            android:gravity="center"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCount"
+        style="@style/text_semi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnPlus"
+        android:layout_alignBottom="@id/btnPlus"
+        android:layout_marginHorizontal="@dimen/margin_medium_1"
+        android:layout_toStartOf="@id/btnPlus"
+        android:gravity="center_vertical"
+        android:text="1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnPlus"
+        android:layout_width="@dimen/height_forward"
+        android:layout_height="@dimen/height_forward"
+        app:cardCornerRadius="@dimen/margin_medium"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/cvToy"
+        android:layout_marginEnd="@dimen/margin_medium_3">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+"
+            style="@style/text_semi_title"
+            android:gravity="center"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_line"
+        android:background="@color/colorGray"
+        android:layout_below="@id/cvToy"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+</RelativeLayout>

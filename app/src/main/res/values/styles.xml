@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MaterialComponents.Light.NoActionBar.TranslucentStatusBar">
+        <!--        <item name="android:windowFullscreen">true</item>-->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="text_extra_light">
+        <item name="android:textColor">@color/colorSecondaryLight</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_light">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textColorHint">@color/colorSecondaryLight</item>
+        <item name="android:fontFamily">@font/inter_light</item>
+        <item name="android:textSize">@dimen/text_regular</item>
+    </style>
+
+    <style name="text_regular">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/text_regular</item>
+    </style>
+
+    <style name="text_medium">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/text_regular</item>
+    </style>
+
+    <style name="text_semi_title">
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">@dimen/text_regular_2x_2</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Chip.Choice.toyCategories">
+        <item name="chipStartPadding">@dimen/margin_medium_1</item>
+        <item name="chipEndPadding">@dimen/margin_medium_1</item>
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="text_price">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/text_heading_1x</item>
+    </style>
+
+    <style name="text_category_new">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+
+
+</resources>

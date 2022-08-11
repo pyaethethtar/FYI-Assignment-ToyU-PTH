@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     
     <color name="colorPrimary">#fe8700</color>
+    <color name="colorPrimaryLight">#fdd553</color>
     <color name="colorSecondary">#3a445a</color>
     <color name="colorSecondaryLight">#95a4c8</color>
     <color name="colorGray">#d8d8d8</color>
@@ -16,4 +17,7 @@
     <color name="colorAccentBlue">#9ad6ff</color>
     <color name="colorAccentYellow">#ffe016</color>
     <color name="colorAccentPink">#ff829b</color>
+    <color name="colorAccentViolet">#9C64FF</color>
+    <color name="colorPink">#FF6464</color>
+    <color name="colorBGwhite">#FAFAFA</color>
 </resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CartFragment"
+    android:background="@color/colorBGwhite">
+
+    <RelativeLayout
+        android:id="@+id/layoutAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu_dark"
+            android:layout_marginEnd="@dimen/margin_medium_1"
+            android:layout_marginStart="@dimen/margin_medium_3"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/title_dark"
+            android:layout_toEndOf="@id/btnMenu"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/noti_dark"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_3"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCarts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_below="@id/layoutAppbar"
+        android:layout_above="@id/layoutTotal"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutTotal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_order_layout"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@drawable/bg_order_layout"
+        android:padding="@dimen/margin_medium"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblTotal"
+            style="@style/text_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btnOrder"
+            android:layout_centerVertical="true"
+            android:text="@string/lbl_pay"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnOrder"
+            style="@style/text_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corner_orange_8"
+            android:paddingHorizontal="@dimen/margin_medium_2"
+            android:paddingVertical="@dimen/margin_medium"
+            android:text="@string/btn_order"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

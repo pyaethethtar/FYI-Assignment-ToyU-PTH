@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">ToyU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_favourite">Favourite</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_profile">Profile</string>
+    <string name="hint_search">Search Toys</string>
+    <string name="title_apply_filter">Apply Filter</string>
+    <string name="title_toy_categories">Toy Categories</string>
+    <string name="title_age_categories">Age Categories</string>
+    <string name="category_exclusive">Exclusive</string>
+    <string name="category_new_release">New Release</string>
+    <string name="category_limited">Limited Edition</string>
+    <string name="category_popular">Popular</string>
+    <string name="category_all">All Categories</string>
+    <string name="title_pricing">Pricing</string>
+    <string name="age_under">under</string>
+    <string name="age_under_03">03</string>
+    <string name="age_under_07">07</string>
+    <string name="age_under_14">14</string>
+    <string name="set_average_price">Set Average Price Range</string>
+    <string name="price_start">0$</string>
+    <string name="price_stop">1,000$</string>
+    <string name="btn_set_default">Set To Default</string>
+    <string name="title_details">Toy Details</string>
+    <string name="btn_add_cart">Add To Cart</string>
+    <string name="btn_swap">Swap With Yours</string>
+    <string name="title_avai_colors">Available Colors</string>
+    <string name="lbl_owned_by">Owned By</string>
+    <string name="btn_order">Order Now</string>
+    <string name="lbl_pay">You need to pay $</string>
+    <string name="tv_item_left"> items left</string>
+    <string name="title_empty_viewpod">Relax Hooman!!!</string>
+    <string name="description_empty_viewpod">Coming Soon</string>
 </resources>
