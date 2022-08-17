@@ -14,12 +14,13 @@ import com.example.toyu.data.vos.ToyVO
 import com.example.toyu.mvp.presenters.SearchPresenter
 import com.example.toyu.mvp.presenters.impls.SearchPresenterImpl
 import com.example.toyu.mvp.view.SearchView
+import com.example.toyu.viewpods.ToysViewPod
 import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : BaseActivity(), SearchView {
 
     private lateinit var mPresenter: SearchPresenter
-    private lateinit var mAdapter : ToysAdapter
+    private lateinit var mToysViewpod : ToysViewPod
     private var mKeyword: String = ""
 
     companion object{
@@ -38,21 +39,21 @@ class SearchActivity : BaseActivity(), SearchView {
         setSupportActionBar(toolbar)
 
         mKeyword = intent.getStringExtra(KEYWORD_EXTRA)?:""
-        setUpPresenter()
+        setUpPresenterAndViewpod()
         setUpAdapter()
         setUpListeners()
         mPresenter.onUiReady(mKeyword, this)
     }
 
-    private fun setUpPresenter(){
+    private fun setUpPresenterAndViewpod(){
         mPresenter = ViewModelProvider(this).get(SearchPresenterImpl::class.java)
         mPresenter.initPresenter(this)
+
+        mToysViewpod = vpToys as ToysViewPod
     }
 
     private fun setUpAdapter(){
-        mAdapter = ToysAdapter(mPresenter)
-        rvSearch.adapter = mAdapter
-        rvSearch.layoutManager = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
+        mToysViewpod.setUpAdapter(mPresenter)
     }
 
     private fun setUpListeners(){
@@ -67,7 +68,7 @@ class SearchActivity : BaseActivity(), SearchView {
     }
 
     override fun displaySearchResult(toys: List<ToyVO>) {
-        mAdapter.setNewData(toys)
+        mToysViewpod.displayToys(toys)
     }
 
     override fun displayResultCount(count: Int) {

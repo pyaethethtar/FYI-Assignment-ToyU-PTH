@@ -45,7 +45,7 @@ class FilterActivity : BaseActivity(), FilterView {
             var chip = findViewById<Chip>(group.checkedChipId)
             if (chip!=null){
                 mToyCategory = chip.text.toString()
-                mPresenter.onChooseToyCategory(mToyCategory)
+//                mPresenter.onChooseToyCategory(mToyCategory)
             }
         }
         cvUner3.setOnClickListener {

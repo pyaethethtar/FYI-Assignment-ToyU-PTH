@@ -72,13 +72,12 @@
                         android:background="@color/white"/>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivToy"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpToyImages"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height_details_image"
                     android:layout_toStartOf="@id/btnRight"
                     android:layout_toEndOf="@id/btnLeft"
-                    android:src="@drawable/mask_group_4"
                     android:layout_marginHorizontal="@dimen/margin_medium_3"/>
 
                 <androidx.cardview.widget.CardView
@@ -97,14 +96,23 @@
                         android:padding="@dimen/margin_medium_1"
                         android:background="@color/white"/>
                 </androidx.cardview.widget.CardView>
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dotsColor="@color/colorSecondaryLight"
+                    app:dotsCornerRadius="@dimen/margin_small"
+                    app:dotsSize="@dimen/margin_medium"
+                    app:dotsSpacing="@dimen/margin_small"
+                    app:dotsWidthFactor="2.5"
+                    app:selectedDotColor="@color/colorSecondary"
+                    app:progressMode="true"
+                    android:layout_marginVertical="@dimen/margin_medium_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/vpToyImages"/>
             </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/group59"
-                android:layout_marginVertical="@dimen/margin_medium_3"
-                android:layout_gravity="center_horizontal"/>
 
             <include
                 android:id="@+id/vpDetails"

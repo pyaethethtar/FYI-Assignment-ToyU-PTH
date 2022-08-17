@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_medium_1"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginBottom="@dimen/margin_medium_3"
+    android:layout_marginEnd="@dimen/margin_medium_1"
+    android:layout_marginTop="@dimen/margin_medium"
+    android:padding="@dimen/margin_card_small">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivToyColor"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:background="@drawable/color_yellow"/>
+
+</androidx.cardview.widget.CardView>

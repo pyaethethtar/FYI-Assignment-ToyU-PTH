@@ -47,4 +47,12 @@ class DetailsPresenterImpl : DetailsPresenter, AbstractBasePresenter<DetailsView
     override fun onTapSwap(id: String) {
         mView?.navigateToSwap(id)
     }
+
+    override fun onTapLeft() {
+        mView?.navigateToLeftToyImage()
+    }
+
+    override fun onTapRight() {
+        mView?.navigateToRightToyImage()
+    }
 }

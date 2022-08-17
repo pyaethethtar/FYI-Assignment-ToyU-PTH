@@ -10,4 +10,6 @@ interface DetailsPresenter : BasePresenter<DetailsView> {
     fun onTapFavourite()
     fun onTapAddToCart(id: String)
     fun onTapSwap(id: String)
+    fun onTapLeft()
+    fun onTapRight()
 }

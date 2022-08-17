@@ -41,4 +41,13 @@
         android:layout_height="match_parent"
         android:layout_below="@id/layoutAppbar"/>
 
+    <include
+        android:id="@+id/vpToys"
+        layout="@layout/viewpod_toys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutAppbar"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:visibility="gone"/>
+
 </RelativeLayout>

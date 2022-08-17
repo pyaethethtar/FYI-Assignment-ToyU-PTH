@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Generic with ratio -->
-
+    <dimen name="margin_card_small">2dp</dimen>
     <dimen name="margin_small">4dp</dimen>
     <dimen name="margin_card_medium">6dp</dimen>
     <dimen name="margin_medium">8dp</dimen>

@@ -4,8 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.toyu.R
+import com.example.toyu.adapters.ToyColorsAdapter
+import com.example.toyu.adapters.ToyImagesAdapter
 import com.example.toyu.mvp.presenters.DetailsPresenter
 import com.example.toyu.mvp.presenters.impls.DetailsPresenterImpl
 import com.example.toyu.mvp.view.DetailsView
@@ -16,6 +19,8 @@ import kotlinx.android.synthetic.main.viewpod_details.*
 class DetailsActivity : BaseActivity(), DetailsView {
 
     private lateinit var mPresenter : DetailsPresenter
+    private lateinit var mAdapter : ToyImagesAdapter
+    private lateinit var mToyColorAdapter : ToyColorsAdapter
     private var mToyId : String = ""
 
     companion object{
@@ -32,6 +37,7 @@ class DetailsActivity : BaseActivity(), DetailsView {
 
         mToyId = intent.getStringExtra(TOY_ID_EXTRA)?:" "
         setUpPresenter()
+        setUpAdapter()
         setUpListeners()
         mPresenter.onUiReady(mToyId, this)
     }
@@ -39,6 +45,16 @@ class DetailsActivity : BaseActivity(), DetailsView {
     private fun setUpPresenter(){
         mPresenter = ViewModelProvider(this).get(DetailsPresenterImpl::class.java)
         mPresenter.initPresenter(this)
+    }
+
+    private fun setUpAdapter(){
+        mAdapter = ToyImagesAdapter()
+        vpToyImages.adapter = mAdapter
+        dotsIndicator.attachTo(vpToyImages)
+
+        mToyColorAdapter = ToyColorsAdapter()
+        rvToyColors.adapter = mToyColorAdapter
+        rvToyColors.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun setUpListeners(){
@@ -56,24 +72,23 @@ class DetailsActivity : BaseActivity(), DetailsView {
         }
 
         btnLeft.setOnClickListener {
-            displayMessage("Tapped Left")
+            mPresenter.onTapLeft()
         }
         btnRight.setOnClickListener {
-            displayMessage("Tapped Right")
+            mPresenter.onTapRight()
         }
     }
 
     override fun displayToyDetails(toy: ToyVO) {
-        Glide.with(this).load(toy.imageList.first().imageUrl).into(ivToy)
+        mAdapter.setNewData(toy.imageList)
+        mToyColorAdapter.setNewData(toy.imageList)
+
         tvPrice.text = "$${toy.price}"
         tvToyType.text = toy.toyCategory
         tvToyName.text = toy.toyName
         ratingbar.progress = toy.rating.toInt()
         tvRate.text = toy.rating.toString()
         tvDescription.text = toy.description
-        toy.imageList.forEach {
-            //binding colors
-        }
         Glide.with(this).load(toy.owner.profileImage).into(ivOwner)
         tvOwner.text = toy.owner.userName
 
@@ -95,5 +110,13 @@ class DetailsActivity : BaseActivity(), DetailsView {
 
     override fun navigateToSwap(id: String) {
         displayMessage("Navigate To Swap")
+    }
+
+    override fun navigateToLeftToyImage() {
+        vpToyImages.setCurrentItem(vpToyImages.currentItem-1)
+    }
+
+    override fun navigateToRightToyImage() {
+        vpToyImages.setCurrentItem(vpToyImages.currentItem+1)
     }
 }

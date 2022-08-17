@@ -8,4 +8,6 @@ interface DetailsView : BaseView {
     fun navigateToBack()
     fun navigateToCart()
     fun navigateToSwap(id: String)
+    fun navigateToLeftToyImage()
+    fun navigateToRightToyImage()
 }
